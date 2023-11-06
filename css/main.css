@@ -1,0 +1,412 @@
+@charset "utf-8";
+
+/**
+  * BASIC STYLES
+  * Author: SZOXIDY
+}**/
+
+/**
+  * 所有标签样式
+  * 内边距: 0
+  * 外边距: 0
+}**/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/**
+  * 主页整体样式
+  * 文本对齐: 中心;
+  * 背景色: #FFFFFF  使用夜间默认时修改为#000000即可
+}**/
+
+body {
+    text-align: center;
+    /*background: white url("https://www.dmoe.cc/random.php") no-repeat content-box;*/
+    background: #FFFFFF;
+}
+
+/**
+  * logo图标样式
+  * 宽度: 192px;
+  * 高度: 108px;
+  * 最大宽度: 250px;
+  * -webkit 动画: flipInX 4s
+  * 动画: flipInX 4s;
+}**/
+
+img.smaller {
+    width: 192px;
+    height: 108px;
+    max-width: 250px;
+    -webkit-animation: flipInX 4s;
+    animation: flipInX 4s;
+}
+
+/**
+  * logo添加文字样式
+  * 字体大小: 2em;
+  * 白色空间: 正常;
+  * 自动换行: 断词;
+  * 文本修饰: 无;
+  * 颜色: #232323
+}**/
+
+.logo {
+    font-size: 2em;
+    white-space: normal;
+    word-wrap: break-word;
+    text-decoration: none;
+    color: #232323
+}
+
+/**
+  * 搜索栏字体样式
+  * 宽度: 90%;
+  * 高度: 40px;
+  * 背景颜色: 透明; 使用夜间模式时修改为#eee或者#f2eada即可
+  * 边框: 无;
+  * 大纲: 0;
+  * 拖拽文本框: 禁止;
+  * 字体大小: 18px;
+  * 字体颜色: #000000;
+  * 填充: 0 20px;
+  * 边界半径: 50px
+}**/
+
+#search_input {
+    width: 90%;
+    height: 40px;
+    background-color: transparent ;
+    border: none;
+    outline: 0;
+    resize: none;
+    font-size: 18px;
+    color: #000000 ;
+    padding: 0 20px;
+    border-radius: 50px
+}
+
+/**
+  * 搜索框边距
+  * 下边距: 30px;
+  * 上边距: 20px;
+}**/
+
+.search_part {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+/**
+  * 搜索栏框架样式 {
+  * 框阴影: 0 0 18px rgba(70,70,40,.255);
+  * -webkit 动画: fadeIn 2.5;
+  * 动画: fadeIn 2.5;
+  * 背景色: rgba(255,255,255,.100);
+  * 边界半径: 50px;
+  * 显示: 表;
+  * 垂直对齐: 居中;
+  * 宽度: 80%;根据你喜欢的宽度调整，目前我为了对齐图标使用80%
+  * 高度: 40px;
+  * 最大宽度: 400px;
+  * 边距: 10px 默认布局;
+}**/
+
+.search_bar {
+    box-shadow: 0 0 18px rgba(70, 70, 40, .255);
+    -webkit-animation: fadeIn 2.5s;
+    animation: fadeIn 2.5s;
+    background-color: rgba(255, 255, 255, 100);
+    border-radius: 50px;
+    display: table;
+    vertical-align: middle;
+    width: 80%;
+    height: 40px;
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+/**
+  * 搜索栏搜索目标确认图标样式，目前为米奇
+  * 轮廓边框: 0;
+  * 高度: 40px;
+  * 浮标位置: 右;
+  * 颜色: #000;
+  * 字体大小: 16px;
+  * 字体粗细: 700;
+  * 边框: 无;
+  * 边框圆滑度: 50%;
+  * 背景颜色: 透明;
+  * 填充: 0 13px 0 13px
+}**/
+
+#search_submit {
+    outline: 0;
+    height: 40px;
+    float: right;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 50%;
+    background: transparent !important;
+    padding: 0 13px 0 13px
+}
+
+/**
+  * 跨度样式
+  * 显示: 阻止;
+  * 溢出: 隐藏;
+  * 左填充: 5px;
+  * 垂直对齐: 居中;
+}**/
+
+span {
+    display: block;
+    overflow: hidden;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+/**
+  * 书签图标排版目录样式
+  * 宽度: 100%;
+  * 文本对齐: 中心;
+  * 填充顶部: 15px;
+  * 填充底部: 15px;
+}**/
+
+#container {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/**
+  * 书签框架样式
+  * -webkit 动画: fadeInDown 1s;
+  * 动画: fadeInDown 1s;
+  * 位置: 相对应;
+  * 显示: 显示在内部;
+  * 宽度 : 75px;
+  * 边框 : 0;
+  * 外边距 : 2px;
+}**/
+
+.box {
+    -webkit-animation: fadeInDown 1s;
+    animation: fadeInDown 1s;
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    border: 0;
+    margin: 2px;
+}
+
+/**
+  * 书签图标样式
+  * 宽度: 100%;
+  * 高度: 54px;
+  * 位置: 不受限制;
+  * 左: 0;
+  * 顶: 0;
+}**/
+
+.box a {
+    width: 100%;
+    height: 54px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/**
+  * 书签字体样式
+  * 颜色: #232323; 使用夜间模式时修改为#eee或者#f2eada即可
+  * 鼠标悬浮: 默认白色箭头样式;
+  * 高度: 1.5em;
+  * 线的高度: 1.5em;
+  * 宽度: 72px;
+  * 字体大小:  0.75em;
+  * 白色空间: nowrap;
+  * 溢出: 隐藏;
+  * 外边距: 自动默认布局;
+  * -webkit 边框顶部右半径: 5px;
+  * -webkit 边框底部右半径: 5px;
+  * -o 文本溢出 : 省略;
+  * 气相色谱-质谱-文本-溢出: 省略;
+  * 文本溢出: 省略;
+  * 填充顶部: 3px;
+  * 填充底部: 8px;
+}**/
+
+.url {
+    color: #232323;
+    cursor: default;
+    height: 1.5em;
+    line-height: 1.5em;
+    width: 72px;
+    font-size: 0.75em;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    padding-top: 3px;
+    padding-bottom: 8px;
+}
+
+/**
+  * 图标样式
+  * -webkit 遮罩位置: 居中;
+  * -webkit 遮罩重复方式: 不重复;
+  * -webkit 遮罩大小: 16px;
+  * 遮罩位置: 居中;
+  * 遮罩重复方式: 不重复;
+  * 遮罩大小: 16px;
+  * 背景位置: 垂直居中 水平居中;
+  * 背景重复方式: 不重复;
+  * 背景大小: 16px;
+  * 高度: 3.2em
+  * 宽度: 3.2em  # 1em = 16px
+}**/
+
+.icon {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 16px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    height: 3.1em;
+    width: 3.1em;
+}
+
+/**
+  * 时间样式
+  * 字体大小: 16px
+  * 背景图片: -webkit 水平线性渐变背景
+  * -webkit 文本填充颜色: 透明
+  * -webkit 背景渐变色的裁剪区域: 文本
+  * -webkit 背景渐变色尺寸: 宽度 高度 与文本大小相同
+  * 文本填充颜色: 水平线性渐变背景
+  * 背景渐变色的裁剪区域: 文本
+  * 背景渐变色尺寸: 宽度 高度 与文本大小相同
+}**/
+
+#currentTime {
+    font-size: 16px;
+    background-image: -webkit-linear-gradient(to right, violet, indigo, #ff4c98, #d9138b, yellow, orange, red);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    background-image: linear-gradient(to right, #38b1fd, #300082, #ff4c98, green, yellow, orange, red);
+    background-clip: text;
+    background-size: 9% 100%;
+    background-attachment: fixed;
+}
+
+/**
+  * 下方为 flipInX 动画定义
+}**/
+
+@-webkit-keyframes flipInX {
+    /* 从不可见到可见 */
+    0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+
+    40% {
+        /* 旋转到-10度 */
+        -webkit-transform: perspective(400px) rotateX(-10deg);
+        transform: perspective(400px) rotateX(-10deg);
+    }
+
+    70% {
+        /* 旋转到10度 */
+        -webkit-transform: perspective(400px) rotateX(10deg);
+        transform: perspective(400px) rotateX(10deg);
+    }
+
+    100% {
+        /* 旋转到0度 */
+        -webkit-transform: perspective(400px) rotateX(0);
+        transform: perspective(400px) rotateX(0);
+        opacity: 1;
+    }
+}
+
+/* 与上面类似的 flipInX 动画定义，但包括了对不同浏览器的兼容性 */
+
+/* fadeIn 动画定义 */
+@-webkit-keyframes fadeIn {
+    /* 从不可见到可见 */
+    0% {
+        opacity: 0;
+    }
+
+    /* 完全可见 */
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    /* 从不可见到可见 */
+    0% {
+        opacity: 0;
+    }
+
+    /* 完全可见 */
+    100% {
+        opacity: 1;
+    }
+}
+
+/* fadeInDown 动画定义 */
+@-webkit-keyframes fadeInDown {
+
+    /* 在垂直方向上向下平移20像素 */
+    0% {
+        opacity: 0; /* 从不可见到可见 */
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    /* 恢复到原始位置 */
+    100% {
+        opacity: 1; /* 完全可见 */
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    /* 在垂直方向上向下平移20像素 */
+    0% {
+        opacity: 0; /* 从不可见到可见 */
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    /* 恢复到原始位置 */
+    100% {
+        opacity: 1; /* 完全可见 */
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
