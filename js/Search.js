@@ -1,4 +1,3 @@
-
 /**
  *
  * 函数介绍: 能根据用户输入内容自动匹配 IP 地址或域名的智能搜索框
@@ -51,6 +50,32 @@ function search() {
             searchInput.value = "";
         }
 
+        // 匹配用户输入域名后的子域名
+        else if (/^(https?:\/\/)?([\w.-]+)(\/.*)?$/.test(URL)) {
+            // 判断输入内容中是否存在 http 或 https 没输入则直接跳转
+
+            if (!(URL.includes('http') || URL.includes('https'))) {
+                // windows.location.href 只能跳转一级目录 需要添加协议头 才能跳转网址
+                window.location.href = "https://" + URL;
+                searchInput.value = "";
+
+                // 如果输入了协议头则去除协议头, 然后统一加载 https 协议
+            } else {
+                // 如果为http://开头 则删除
+                if (/^(http:\/\/)/.test(URL))
+                    URL = URL.replace(new RegExp('http://', 'g'), '');
+
+                // 如果为https://开头 则删除
+                if (/^(https:\/\/)/.test(URL))
+                    URL = URL.replace(new RegExp('https://', 'g'), '');
+
+                // 统一加载 https://
+                window.location.href = "https://" + URL;
+                searchInput.value = "";
+            }
+
+        }
+
         // 匹配用户输入IPV4地址 还需匹配端口号
         else if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(:[0-9]+)?$/.test(URL)) {
             window.location.href = "http://" + URL;
@@ -69,7 +94,7 @@ function search() {
             searchInput.value = "";
 
         } else {
-            // 跳转到 Google 搜索引擎
+            // 跳转到 Bing 搜索引擎
             window.location.href = "https://cn.bing.com/search?q=" + URL;
             searchInput.value = "";
         }
@@ -86,11 +111,8 @@ window.onload = () => {
     // 获取当前文本框光标
     const inputElements = document.querySelectorAll('input[type = "text"], textarea');
 
-    // 获取 box 下 文本颜色
+    // 获取 box 下文本颜色
     const textColor = document.getElementsByClassName('url');
-
-    // 获取输入框样式
-    const searchInput = document.getElementById('search_input');
 
     // 获取 bar 样式
     const searchBar = document.getElementsByClassName('search_bar');
