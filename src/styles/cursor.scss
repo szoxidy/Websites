@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/**
+  * BASIC STYLES
+  * @Author: SZOXIDY
+}**/
+
+/**
+  * 主页整体样式
+  * 鼠标: 正常
+}**/
+body {
+  cursor: var(--normal) !important;
+}
+
+/**
+  * 搜索栏字体样式
+  * 鼠标: 光束
+}**/
+#search_input:hover {
+  cursor: var(--beam) !important;
+}
+
+/**
+  * 书签字体样式
+  * 鼠标: 光束;
+}**/
+.url {
+  cursor: var(--beam) !important;
+}
+
+/**
+  * 书签图标样式
+  * 鼠标: 点击
+}**/
+.box a:hover {
+  cursor: var(--click) !important;
+}
+
+/**
+  * Google GIF 超链接点击样式
+  * 鼠标: 点击
+}**/
+a.logo :hover {
+  cursor: var(--click) !important;
+}
+
+/**
+  * 搜索框右侧搜索Start按钮点击样式
+  * 鼠标: 点击
+}**/
+#search_submit {
+  cursor: var(--click) !important;
+}
+
+.switch-theme :hover {
+  cursor: var(--click) !important;
+}

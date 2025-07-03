@@ -1,0 +1,97 @@
+// ================= Switch Theme =================
+// 在最顶部添加：
+@use 'sass:map';
+
+.switch-theme {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  display: block;
+  width: min(8vw, 48px);
+  height: min(8vw, 48px);
+  cursor: pointer;
+  fill: color-mix(in srgb, var(--md-sys-color-primary-container), #fff 30%);
+  transition: opacity 0.3s ease;
+  opacity: 0.85;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transform-origin: right top;
+  z-index: 1;
+  animation-fill-mode: both;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  > svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+$theme-light: (
+        background: #ffffff,
+        foreground: #000000,
+        url: #000000,
+        bar-background: rgba(255, 255, 255, 1),
+        bar-shadow: 0 0 18px rgba(70, 70, 40, .255),
+        submit: #000000
+);
+
+$theme-dark: (
+        background: #000000,
+        foreground: #ffffff,
+        url: rgb(190, 190, 190),
+        bar-background: rgba(26, 26, 26, 1),
+        bar-shadow: 0 0 18px rgba(255, 255, 255, .30),
+        submit: rgb(197, 197, 210)
+);
+
+@mixin apply-theme($theme) {
+  body {
+    background: map.get($theme, background);
+    color: map.get($theme, foreground);
+  }
+
+  input[type="text"],
+  textarea {
+    color: map.get($theme, foreground);
+    caret-color: map.get($theme, foreground);
+  }
+
+  .url {
+    color: map.get($theme, url);
+  }
+  .search_bar {
+    background: map.get($theme, bar-background);
+    box-shadow: map.get($theme, bar-shadow);
+  }
+  #search_submit {
+    color: map.get($theme, submit);
+  }
+}
+
+/* 默认浅色 —— 系统光主题下直接生效 */
+@include apply-theme($theme-light);
+
+/* 系统暗色 */
+@media (prefers-color-scheme: dark) {
+  @include apply-theme($theme-dark);
+}
+
+/* 用户手动覆盖 */
+html.light-mode {
+  #github {
+    filter: none;
+  }
+
+  @include apply-theme($theme-light);
+}
+
+html.dark-mode {
+  #github {
+    filter: invert(1);
+    pointer-events: none;
+  }
+
+  @include apply-theme($theme-dark);
+}

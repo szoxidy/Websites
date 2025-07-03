@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" preserveAspectRatio="xMidYMid meet" overflow="visible">
+    <defs>
+        <style>
+            .core {
+                fill: #f5b00055;
+                stroke: #f5b000;
+                stroke-width: 4;
+            }
+
+            .ray {
+                stroke: #f5b000;
+                stroke-width: 4;
+                stroke-linecap: round;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 100;
+                opacity: 0;
+                animation: draw .35s ease-out forwards
+            }
+
+            .ray:nth-of-type(1) {
+               animation-delay: .00s
+            }
+
+            .ray:nth-of-type(2) {
+                animation-delay: .05s
+            }
+
+            .ray:nth-of-type(3) {
+                animation-delay: .10s
+            }
+
+            .ray:nth-of-type(4) {
+                animation-delay: .15s
+            }
+
+            .ray:nth-of-type(5) {
+                animation-delay: .20s
+            }
+
+            .ray:nth-of-type(6) {
+                animation-delay: .25s
+            }
+
+            .ray:nth-of-type(7) {
+                animation-delay: .30s
+            }
+
+            .ray:nth-of-type(8) {
+                animation-delay: .35s
+            }
+
+            .whole {
+                transform-origin: 50% 50%;
+                transform-box: fill-box;
+                animation: rotOnce .6s cubic-bezier(.22, 1.5, .4, 1) both
+            }
+
+            @keyframes rotOnce {
+            to {
+                transform: rotate(-360deg)
+                }
+            }
+
+            @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+                opacity: 1
+                }
+            }
+        </style>
+    </defs>
+    <path class="core"
+          d="M70 49.5C70 60.8218 60.8218 70 49.5 70C38.1782 70 29 60.8218 29 49.5C29 38.1782 38.1782 29 49.5 29C60 29 69.5 38 70 49.5Z"/>
+
+    <g class="whole">
+        <path class="ray core" d="M50 2V11"/>
+        <path class="ray core" d="M85 15L78 22"/>
+        <path class="ray core" d="M98 50H89"/>
+        <path class="ray core" d="M85 85L78 78"/>
+        <path class="ray core" d="M50 98V89"/>
+        <path class="ray core" d="M23 78L16 84"/>
+        <path class="ray core" d="M11 50H2"/>
+        <path class="ray core" d="M23 23L16 16"/>
+    </g>
+</svg>
