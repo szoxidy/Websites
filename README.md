@@ -60,7 +60,7 @@
 ```bash
 # 克隆代码
 git clone https://github.com/szoxidy/Websites.git
-cd ww.szoxidy.com
+cd Websites
 
 # 安装依赖
 pnpm install

@@ -60,7 +60,7 @@
 ```bash
 # Clone the code
 git clone https://github.com/szoxidy/Websites.git
-cd ww.szoxidy.com
+cd Websites
 
 # Install dependencies
 pnpm install
