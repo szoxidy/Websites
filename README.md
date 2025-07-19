@@ -37,7 +37,7 @@
 * ⏰ **实时时钟**：显示当前北京时间，精确到秒
 * 🔗 **书签导航**：精心整理的常用网站快捷入口，包含学习、娱乐、开发等分类
 * 📱 **响应式设计**：完美适配移动端与桌面端
-* ⚡ **高性能**：基于 Vue 3 Composition API，使用 Vite 构建，快速加载
+*  ⚡ **高性能**：基于 Vue 3 Composition API，使用 Vite 构建，快速加载
 
 ---
 
@@ -59,8 +59,8 @@
 
 ```bash
 # 克隆代码
-git clone https://github.com/szoxidy/Websites.git
-cd Websites
+git clone https://github.com/szoxidy/websites.git
+cd websites
 
 # 安装依赖
 pnpm install

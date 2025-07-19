@@ -1,7 +1,7 @@
 <template>
-  <form @submit.prevent="search" class="search_bar">
+  <form @submit.prevent="useSearch" class="search_bar">
     <label for="search_submit"></label>
-    <input type="submit" id="search_submit" @submit.prevent="search" value="Start">
+    <input type="submit" id="search_submit" @submit.prevent="useSearch" value="Start">
 
     <span>
       <label for="search_input"></label>
@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import {search} from '@/composables/useSearch'
+import {useSearch} from '@/composables/useSearch'
 </script>
 <style lang="scss" scoped>
 </style>

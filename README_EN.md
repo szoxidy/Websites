@@ -37,7 +37,7 @@
 * ⏰ **Real-time Clock**: Displays current Beijing time with second-level precision
 * 🔗 **Bookmark Navigation**: Carefully curated quick access to commonly used websites, including learning, entertainment, development, and other categories
 * 📱 **Responsive Design**: Perfectly adapts to mobile and desktop devices
-* ⚡ **High Performance**: Built on Vue 3 Composition API with Vite for fast loading
+*  ⚡ **High Performance**: Built on Vue 3 Composition API with Vite for fast loading
 
 ---
 
@@ -59,8 +59,8 @@
 
 ```bash
 # Clone the code
-git clone https://github.com/szoxidy/Websites.git
-cd Websites
+git clone https://github.com/szoxidy/websites.git
+cd websites
 
 # Install dependencies
 pnpm install
